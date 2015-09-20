@@ -1,0 +1,15 @@
+<% @num = 1 %>
+<% @stores.each do |store| %>
+
+<li>
+  <dl>
+    <dt><%= @num %>. <%= store.name %></dt>
+    <dd>Description: <%= store.description %></dd>
+    <dd>Phone:</dd><dd><%= store.phone %></dd>
+    <dd>Opening Hours:</dd><dd><%= store.open_hours %></dd>
+    <dd>Location:</dd><dd><%= store.post_code %></dd>
+    <dd>Map:</dd><p name="storeLoc" value="<%= store.post_code %>" ></p>
+  </dl>
+</li>
+<% @num += 1 %>
+<% end %>
