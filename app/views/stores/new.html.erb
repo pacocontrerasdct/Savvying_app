@@ -1,11 +1,13 @@
-<h1>I'm new store</h1>
-<div class="row">
-  <div class="small-6 large-9 columns">
-    <div id="map"></div>
+<div id="container-new">
+  <h1>I'm new store</h1>
+  <div class="row">
+    <div class="small-6 large-9 columns">
+    </div>
+    <div class="small-6 large-2 columns">
+      <%= render "stores/aside" %>
+    </div>  
   </div>
-  <div class="small-6 large-2 columns">
-    <%= render "items/aside" %>
-  </div>  
+
 </div>
 
 
@@ -13,9 +15,3 @@
 
 
 
-
-
-
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
-</script>

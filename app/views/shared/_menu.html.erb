@@ -1,21 +1,21 @@
-<div class="fixed">
+<div>
   <nav class="breadcrumbs" role="menubar" aria-label="breadcrumbs">
       <li role="menuitem"><%= link_to 'Home', root_path %></li>
       <li role="menuitem"><%= link_to 'Stores', stores_path %></li>
       <li role="menuitem"><%= link_to 'Products', items_path %></li>
-  </nav>  
-
+  </nav>
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><%= link_to 'SAVVYing', root_path %></h1>
+        <h1><%= link_to 'SAVVYing', root_path, title: 'Savvying, built for savvy shoppers'  %></h1>
       </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
 
+    <!-- Right Nav Section 
     <section class="top-bar-section">
-      <!-- Right Nav Section -->
+      
       <ul class="right">
         <li class="active"><a href="#">Right Button Active</a></li>
         <li class="has-dropdown">
@@ -27,5 +27,7 @@
         </li>
       </ul>
     </section>
+    -->
+
   </nav>
 </div>

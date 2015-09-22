@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
-
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title>Savvying, built for savvy shoppers</title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -17,9 +16,9 @@
     <header>
       <%= render "shared/menu" %>
     </header>
-    
-    
-
     <%= yield %>
+    <footer>
+      <%= render "shared/foot_menu" %>
+    </footer>
   </body>
 </html>

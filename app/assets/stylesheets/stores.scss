@@ -9,3 +9,9 @@ html, body { height: 100%; margin: 0; padding: 0; }
   width: 100%;
   margin: 5px;
  }
+
+#container-index, #container-show, #container-new, #container-edit { 
+  height: auto;
+  margin-top: 15px;
+  z-index: 1000;
+}
