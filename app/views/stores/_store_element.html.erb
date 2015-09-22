@@ -8,7 +8,7 @@
     <dd>Phone:</dd><dd><%= store.phone %></dd>
     <dd>Opening Hours:</dd><dd><%= store.open_hours %></dd>
     <dd>Location:</dd><dd><%= store.post_code %></dd>
-    <dd>Map:</dd><p name="storeLoc" value="<%= store.post_code %>" ></p>
+    <dd><button id="<%= @num %>" value="<%= store.post_code %>" name="<%= store.post_code %>" >Map</button></dd>
   </dl>
 </li>
 <% @num += 1 %>

@@ -1,0 +1,41 @@
+<div id="container-new">
+  <%= form_for @item do |form| %>
+    <div class="row">
+      <div class="large-12 columns">
+        <%= form.label "Product Name" %>
+        <%= form.text_field :name, :placeholder => "powder, milk, beer" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-4 columns">
+        <%= form.label "Category" %>
+        <%= form.select("category", Item.all.order('category ASC').map {|p| [ p.category ] }, {prompt: 'Select Category'}) %>
+      </div>
+      <div class="large-4 columns">
+        <%= form.label "Store" %>
+        <%= form.select("name", Store.all.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Store'}) %>
+      </div>
+      <div class="large-4 columns">
+        <%= form.label "Price" %>
+        <%= form.text_field :price, :placeholder => "2,000.00" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <%= form.label "Description" %>
+        <%= form.text_field :description, placeholder: "Write down the information relevant about this product" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <%= form.label "Picture" %>
+        <%= form.file_field :image, accept: 'image/png,image/gif,image/jpeg', placeholder: "Select a picture from your computer", class: 'button-form' %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <%= form.submit 'Add', :class => "button" %>
+      </div>
+    </div>
+  <% end %>
+</div>

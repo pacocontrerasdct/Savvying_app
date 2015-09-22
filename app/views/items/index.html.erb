@@ -1,10 +1,45 @@
-<h1>Items index</h1>
+<div id="container-index">
+  <div class="row">
+    <div class="small-4 large-2 columns"></div>
+    <div class="small-4 large-8 columns">
 
-<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-  <li>Pictures1</li>
-  <li>Pictures2</li>
-  <li><!-- Your content goes here --></li>
-  <li><!-- Your content goes here --></li>
-  <li><!-- Your content goes here --></li>
-  <li><!-- Your content goes here --></li>
-</ul>
+      <ul class="small-block-grid-1 large-block-grid-3">
+      <% @num = 1 %>
+      <% @control = 1 %>
+      <% @lenght = @items.length %>
+      <% @items.each do |item| %>
+
+        <li>
+        <div>
+          <ul class="large-block-grid-1">
+            <li style="text-align: center; padding: 0 0 20px 0;"><%= image_tag item.image %></li>
+          </ul>
+          <span><em>Product:</em> <%= item.name %></span><br>
+          <span><em>Description:</em> <%= item.description %></span><br>
+          <span><em>Category:</em> <%= item.category %></span><br>
+          <span><em>Price:</em> <%= item.price %></span><br>
+          <span><em>User who created this item:</em> "item.user_id"</span><br>
+          <span><em>Shop where user bought this item:</em><% @id = item.store_id - 1 %> <%= @stores[@id].name %></span><br>
+          <br>
+          <span><div class="linethin"><%= link_to 'Show', item %></div></span><br>
+        </div>
+        
+        </li>
+        <% @control += 1 %>
+        <% if @num == 3 %>
+          </ul><ul class="small-block-grid-1 large-block-grid-3">
+          <% @num = 0 %>
+        <% elsif @control == @lenght %>
+          </ul>
+        <% end %>
+
+      <% @num += 1 %> 
+      <% end %>
+
+    </div>
+    <div class="small-4 large-2 columns">
+      <%= render "items/aside" %>
+    </div>
+  </div>
+</div>
+

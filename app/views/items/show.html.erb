@@ -1,1 +1,35 @@
-<h1>Show in index</h1>
+<div id="container-show">
+  <div id="row">
+    <div class="large-2 columns">List of item same category</div>
+    <div class="large-6 columns">
+
+      <div class="field">
+      <span><h3><%= @item.name %></h3></span>
+      <div class="linethin"></div>
+      </div>  
+
+      <span><em>Product:</em> <%= @item.name %></span><br>
+      <span><em>Description:</em> <%= @item.description %></span><br>
+      <span><em>Category:</em> <%= @item.category %></span><br>
+      <span><em>Price:</em> <%= @item.price %></span><br>
+      
+      <span><em>User who created this item:</em> "@item.user_id"</span><br>
+      <span><em>Shop where user bought this item:</em><% @id = @item.store_id - 1 %><%= @stores[@id].name %></span><br>
+      <br>
+      <div class="button-bar">
+        <ul class="inline-list">
+          <li role="menuitem"><div class="linethin"><%= link_to "Ok", :items %></div></li>
+          <li role="menuitem"><div class="linethin"><%= link_to "Edit", :edit_item %></div></li>
+          <li role="menuitem"><div class="linethin"><%= link_to "Delete", @item, method: :delete %></div></li>
+        </ul>
+      </div>   
+
+    </div>
+    <div class="large-1 columns"><span class="transparent">o</span>
+    </div>
+    <div class="large-3 columns">
+        <span><%= image_tag @item.image %></span>
+    </div>
+  </div>
+
+</div> 
