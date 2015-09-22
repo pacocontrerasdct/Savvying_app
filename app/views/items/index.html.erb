@@ -16,10 +16,11 @@
           </ul>
           <span><em>Product:</em> <%= item.name %></span><br>
           <span><em>Description:</em> <%= item.description %></span><br>
-          <span><em>Category:</em> <%= item.category %></span><br>
-          <span><em>Price:</em> <%= item.price %></span><br>
+          <span><em>Category:</em><% @category_id = item.category_id - 1 %> <%= @categories[@category_id].name %></span><br>
+          <span><em>Price:</em> <%= item.price %> £</span><br>
           <span><em>User who created this item:</em> "item.user_id"</span><br>
-          <span><em>Shop where user bought this item:</em><% @id = item.store_id - 1 %> <%= @stores[@id].name %></span><br>
+          <span><em>Shop where user bought this item:</em>
+          <% @store_id = item.store_id - 1 %> <%= @stores[@store_id].name %></span><br>
           <br>
           <span><div class="linethin"><%= link_to 'Show', item %></div></span><br>
         </div>

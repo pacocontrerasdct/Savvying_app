@@ -1,0 +1,12 @@
+<div class="background-lighter">
+  <div class="linethin"></div>
+  <p>Items related</p>
+  <div class="linethin"></div>
+  <br>
+  <ul>
+  <% @items = Item.all %>
+  <% @items.each do |item| %>
+  <li><%= link_to item.name, item %></li>
+  <% end %> 
+  </ul>
+</div>
