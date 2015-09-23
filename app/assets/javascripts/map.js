@@ -28,16 +28,16 @@ $(document).ready(function() {
 
 })
 
-function ajaxRequest(method, url) {
-  var request = new XMLHttpRequest();
-  request.open(method, url)
-  request.send();
-  return request;
-}
+//function ajaxRequest(method, url) {
+//  var request = new XMLHttpRequest();
+//  request.open(method, url)
+//  request.send();
+//  return request;
+//}
 
-function successfulRequest(request) {
-  return request.readyState === 4 && request.statusText === 'OK'
-}
+//function successfulRequest(request) {
+//  return request.readyState === 4 && request.statusText === 'OK'
+//}
 
 
 
@@ -94,13 +94,6 @@ function addMarker(map) {
 
 
 }
-
-
-
-
-
-
-
 
 
 function addMarker(map) {
