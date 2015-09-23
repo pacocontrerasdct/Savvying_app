@@ -1,14 +1,6 @@
 <% @num = 1 %>
 <% @stores.each do |store| %>
-
-<li>
-  <dl>
-    <dt><%= @num %>. <%= store.name %></dt>
-    <dd>Description: <%= store.description %></dd>
-    <dd>Phone:</dd><dd><%= store.phone %></dd>
-    <dd>Opening Hours:</dd><dd><%= store.open_hours %></dd>
-    <dd>Location:</dd><address><%= store.post_code %></address>
-  </dl>
-</li>
+    <%= link_to store.name, store, class: "button tiny" %>
+    <address class="transparent"><%= store.post_code %></address>
 <% @num += 1 %>
 <% end %>

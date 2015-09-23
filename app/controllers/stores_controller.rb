@@ -9,7 +9,14 @@ class StoresController < ApplicationController
   end
 
   def create
-
+    store = Store.new(store_params)
+    if store.save
+      flash[:notice] = 'New store created successfully!'
+      redirect_to stores_path
+    else
+      flash.now[:error] = "Error: #{store.errors.full_messages}"
+      render :new
+    end
   end
 
   def show
@@ -21,11 +28,25 @@ class StoresController < ApplicationController
   end
 
   def update
-
+    store = Store.find(params[:id])
+    if store.update(store_params)
+      flash[:notice] = 'Store details have been updated successfully!'
+      redirect_to store_path
+    else
+      flash.now[:error] = "Error: #{store.errors.full_messages}"
+      render :new
+    end
   end
 
   def destroy
-
+    store = Store.find(params[:id]).destroy
+    if store
+      flash[:notice] = 'Store deleted successfully!'
+      redirect_to stores_path
+    else
+      flash.now[:error] = "Error: #{store.errors.full_messages}"
+      render :edit
+    end
   end
 
   def store_params

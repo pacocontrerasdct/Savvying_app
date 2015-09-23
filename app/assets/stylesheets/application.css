@@ -15,3 +15,11 @@
  *= require foundation_and_overrides
 
  */
+
+ .message {
+  color: white;
+ }
+ .transparent {
+  color: transparent;
+  font-size: 0px;
+ }

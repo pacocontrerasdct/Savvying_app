@@ -7,11 +7,15 @@ html, body { height: 100%; margin: 0; padding: 0; }
 #map {
   height: 400px;
   width: 100%;
-  margin: 5px;
  }
 
 #container-index, #container-show, #container-new, #container-edit { 
   height: auto;
   margin-top: 15px;
   z-index: 1000;
+}
+
+.border{
+  border: 1px solid black;
+  background-image: url("grey_map.png");
 }

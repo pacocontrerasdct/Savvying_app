@@ -9,11 +9,11 @@
     <div class="row">
       <div class="large-4 columns">
         <%= form.label "Category" %>
-        <%= form.select("category", Item.all.order('category ASC').map {|p| [ p.category ] }, {prompt: 'Select Category'}) %>
+        <%= form.select("name", @categories.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Category'}) %>
       </div>
       <div class="large-4 columns">
         <%= form.label "Store" %>
-        <%= form.select("name", Store.all.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Store'}) %>
+        <%= form.select("name", @stores.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Store'}) %>
       </div>
       <div class="large-4 columns">
         <%= form.label "Price" %>
@@ -34,7 +34,8 @@
     </div>
     <div class="row">
       <div class="large-12 columns">
-        <%= form.submit 'Add', :class => "button" %>
+        <%= form.submit 'Add', :class => "button tiny" %>
+        <%= link_to 'Cancel', items_path, :class => "button tiny" %>
       </div>
     </div>
   <% end %>

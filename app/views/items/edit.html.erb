@@ -9,12 +9,14 @@
     <div class="row">
       <div class="large-4 columns">
         <%= form.label "Category" %>
-        <% c1 = Category.find(@item.category_id) %>
+        <% id = @item.category_id %>
+        <% c1 = Category.find(id) %>
         <%= form.select(:category_id, options_from_collection_for_select(@categories, :id , :name, c1.id )) %>
       </div>
       <div class="large-4 columns">
         <%= form.label "Store" %>
-        <% s1 = Store.find(@item.store_id) %>
+        <% id = @item.store_id %>
+        <% s1 = Store.find(id) %>
         <%= form.select(:store_id, options_from_collection_for_select(@stores, :id , :name, s1.id )) %>
       </div>
       <div class="large-4 columns">

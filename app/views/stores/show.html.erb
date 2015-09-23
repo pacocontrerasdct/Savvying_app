@@ -1,9 +1,28 @@
 <div id="container-show">
-  <h1>I'm show store</h1>
+  <div class="row">
+    <div class="small-2 large-2 columns">
 
-
-
-
+    </div>
+    <div class="small-8 large-6 columns">
+      <dl>
+        <h1><dt><%= @store.name %></dt></h1>
+        <dt>Description:</dt><dd><%= @store.description %></dd>
+        <dt>Phone:</dt><dd><%= @store.phone %></dd>
+        <dt>Opening Hours:</dt><dd><%= @store.open_hours %></dd>
+        <dt>Location:</dt><address><%= @store.post_code %></address>
+      </dl>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= link_to 'Edit', edit_store_path, class: "button tiny" %>
+          <%= link_to 'Cancel', stores_path, class: "button tiny" %>
+          <%= link_to 'Delete', @store, method: :delete, class: "button tiny" %>
+        </div>
+      </div>
+    </div>
+    <div class="small-2 large-6 columns">
+      <%= image_tag "old_store", size: "400x280" %>
+    </div>
+  </div>
 </div>
 
 
