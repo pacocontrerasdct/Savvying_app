@@ -1,28 +1,8 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1>SAVVYing is an application to save money buying smartly in your surroundings</h1>
 
-Things you may want to cover:
+Main core is to sign in the app, and after giving your position, post code or whatever reference, you can check stores available in a mile distance around you and what products other users added to the savviers knowledge, to get the one you are looking for, but for the cheapest price.  
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ruby 2.2.0p0 (2014-12-25 revision 49005)
