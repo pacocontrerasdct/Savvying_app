@@ -3,7 +3,7 @@ console.log("hello World");
 function initialise() {
   var mapOptions = {
     center: new google.maps.LatLng(51.574538, -0.008641),
-    zoom: 15
+    zoom: 13
   };
 
   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -62,7 +62,7 @@ function initialise(userInput) {
 
   var mapOptions = {
     center: new google.maps.LatLng(51.574538, -0.008641),
-    zoom: 15
+    zoom: 13
   };
 
   var map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -78,7 +78,7 @@ function addMarker(map) {
       var marker = new google.maps.Marker({
         map: map,
         animation: google.maps.Animation.DROP,
-        position: position,
+        position: position
       });
     } else {
       console.log("oh no. you can't geocode that address!");

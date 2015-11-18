@@ -14,7 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+# For Heroku deployment
+gem 'thin'
 # Include 'rails_12factor' gem to enable all platform features
 # See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
 gem 'rails_12factor'
