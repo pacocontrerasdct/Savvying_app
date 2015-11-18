@@ -88,10 +88,11 @@ test:
 
 production:
   <<: *default
-  database: Savvying_app_production
-  username: Savvying_app
-  # database: dbcl1re377uqvu
-  # username: cicqqopjjuhbvb
+  # database: Savvying_app_production
+  # username: Savvying_app
+  database: dbcl1re377uqvu
+  username: cicqqopjjuhbvb
+  url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV['SAVVYING_APP_DATABASE_PASSWORD'] %>
 
 
