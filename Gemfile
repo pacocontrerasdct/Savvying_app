@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -13,6 +14,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+# Include 'rails_12factor' gem to enable all platform features
+# See https://devcenter.heroku.com/articles/rails-integration-gems for more information.
+gem 'rails_12factor'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.0', '>= 4.0.5'
@@ -28,7 +33,7 @@ gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-  gem 'carrierwave'
+gem 'carrierwave'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
