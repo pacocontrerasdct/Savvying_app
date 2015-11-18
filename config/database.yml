@@ -17,7 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
+  # host: localhost
+  # database: Savvying_app_development
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -27,15 +28,15 @@ development:
   adapter: postgresql
   host: localhost
   # username: dbcl1re377uqvu
-  # database: Savvying_app_development
-  username: user
-  database: savvying-dev
+  database: Savvying_app_development
+  # username: user
+  # database: savvying-dev
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: Savvying_app
+  # username: Savvying_app
 
   # The password associated with the postgres role (username).
   #password:
@@ -76,22 +77,21 @@ test:
 #
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
-  
-  host: ec2-54-217-240-205.eu-west-1.compute.amazonaws.com
-  
-  
+
+  # host: ec2-54-217-240-205.eu-west-1.compute.amazonaws.com
+
 
 # You can use this database configuration with:
 
-production:
-    url: <%= ENV['DATABASE_URL'] %>
+# production:
+#     url: <%= ENV['DATABASE_URL'] %>
 
 production:
   <<: *default
-  # database: Savvying_app_production
-  # username: Savvying_app
-  database: dbcl1re377uqvu
-  username: cicqqopjjuhbvb
+  database: Savvying_app_production
+  username: Savvying_app
+  # database: dbcl1re377uqvu
+  # username: cicqqopjjuhbvb
   password: <%= ENV['SAVVYING_APP_DATABASE_PASSWORD'] %>
 
 
