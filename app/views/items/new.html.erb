@@ -1,5 +1,6 @@
 <div id="container-new">
   <%= form_for @item do |form| %>
+  <%= form_for @item, html: { multipart: true } do |form| %>
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Product Name" %>
@@ -30,7 +31,8 @@
       <div class="large-12 columns">
         <%= form.label "Picture" %>
         <%#= form.file_field :image, accept: 'image/png,image/gif,image/jpeg', placeholder: "Select a picture from your computer", class: 'button-form' %>
-        <%= form.text_field :image, placeholder: "Select a picture for this product", class: 'button-form' %>
+        <%= image_tag(@item.image_url) if @item.image? %>
+        <%= form.text_field :remote_image_url, placeholder: "Select a picture for this product", class: 'button-form' %>
       </div>
     </div>
     <div class="row">
