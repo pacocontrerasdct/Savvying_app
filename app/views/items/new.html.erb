@@ -10,7 +10,7 @@
     <div class="row">
       <div class="large-4 columns">
         <%= form.label "Category" %>
-        <%= form.select("name", @categories.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Category'}) %>
+        <%= form.select("name", @categories.order('name ASC').map {|category| [ category.name ] }, {prompt: 'Select Category'}) %>
       </div>
       <div class="large-4 columns">
         <%= form.label "Store" %>
