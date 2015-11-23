@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
-    @stores = Store.all.order('name ASC')
+    @stores = Store.all.order('name_store ASC')
     @categories = Category.all.order('name ASC')
   end
 
