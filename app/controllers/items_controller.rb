@@ -64,4 +64,3 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :description, :price, :image, :store_id, :category_id)
   end
 end
-
