@@ -4,15 +4,9 @@
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Product Name" %>
-        <%= form.text_field :name, :placeholder => "powder, milk, beer" %>
+        <%= form.text_field :name_item, :placeholder => "powder, milk, beer" %>
       </div>
     </div>
-
-
- INSERT INTO "items" ("name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Poundland"], ["description", "grugugr"], ["price", "2"], ["created_at", "2015-11-23 21:38:47.836816"], ["updated_at", "2015-11-23 21:38:47.836816"]] 
-
-
-
     <div class="row">
       <div class="large-4 columns">
         <%= form.label "Category" %>
