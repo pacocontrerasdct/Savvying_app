@@ -2,7 +2,7 @@
 <div class="linethin"></div>
 <% @num = 1 %>
 <% @stores.each do |store| %>
-    <%= link_to store.name, store, class: "button tiny" %>
+    <%= link_to store.name_store, store, class: "button tiny" %>
     <address class="transparent"><%= store.post_code %></address>
 <% @num += 1 %>
 <% end %>

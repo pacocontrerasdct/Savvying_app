@@ -6,7 +6,7 @@
   <ul>
   <% @items = Item.all %>
   <% @items.each do |item| %>
-  <li><%= link_to item.name, item %></li>
+  <li><%= link_to item.name_item, item %></li>
   <% end %> 
   </ul>
 </div>

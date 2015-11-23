@@ -10,13 +10,13 @@
       <div class="linethin"></div>
       </div>  
 
-      <span><em>Product:</em> <%= @item.name %></span><br>
-      <span><em>Description:</em> <%= @item.description %></span><br>
+      <span><em>Product:</em> <%= @item.name_item %></span><br>
+      <span><em>Description:</em> <%= @item.description_item %></span><br>
       <span><em>Category:</em> <% @category_id = (@item.category_id.to_i - 1) %> <%= @categories[@category_id].name %></span><br>
       <span><em>Price:</em> <%= @item.price %> £</span><br>
       
       <span><em>User who created this item:</em> Paco</span><br>
-      <span><em>Shop where user bought this item:</em><% @id = (@item.store_id.to_i - 1) %> <%= @stores[@id].name %></span><br>
+      <span><em>Shop where user bought this item:</em><% @id = (@item.store_id.to_i - 1) %> <%= @stores[@id].name_store %></span><br>
       <br>
       <div class="button-bar">
         <ul class="inline-list">
@@ -30,7 +30,7 @@
     <div class="large-1 columns"><span class="transparent">o</span>
     </div>
     <div class="large-3 columns">
-        <span><%= image_tag @item.image %></span>
+        <span><%= image_tag @item.image_item %></span>
     </div>
   </div>
 

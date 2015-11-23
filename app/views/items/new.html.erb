@@ -18,10 +18,10 @@
         <%= form.label "Category" %>
         <%= form.select("name", @categories.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Category'}) %>
       </div>
-      <!-- <div class="large-4 columns"> -->
-        <%#= form.label "Store" %>
-        <%#= form.select("name", @stores.order('name ASC').map {|p| [ p.name ] }, {prompt: 'Select Store'}) %>
-      <!-- </div> -->
+      <div class="large-4 columns">
+        <%= form.label "Store" %>
+        <%= form.select("name_store", @stores.order('name_store ASC').map {|p| [ p.name_store ] }, {prompt: 'Select Store'}) %>
+      </div>
       <div class="large-4 columns">
         <%= form.label "Price" %>
         <%= form.text_field :price, :placeholder => "2,000.00" %>
@@ -30,15 +30,15 @@
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Description" %>
-        <%= form.text_field :description, placeholder: "Write down the information relevant about this product" %>
+        <%= form.text_field :description_item, placeholder: "Write down the information relevant about this product" %>
       </div>
     </div>
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Picture" %>
-        <%#= form.file_field :image, accept: 'image/png,image/gif,image/jpeg', placeholder: "Select a picture from your computer", class: 'button-form' %>
-        <%= image_tag(@item.image_url) if @item.image? %>
-        <%= form.text_field :image, placeholder: "Select a picture for this product", class: 'button-form' %>
+        <%= form.file_field :image_item, accept: 'image/png,image/gif,image/jpeg', placeholder: "Select a picture from your computer", class: 'button-form' %>
+        <%#= image_tag(@item.image_item_url) if @item.image_item? %>
+        <%= form.text_field :image_item, placeholder: "Select a picture for this product", class: 'button-form' %>
         <%#= form.text_field :remote_image_url, placeholder: "Select a picture for this product", class: 'button-form' %>
       </div>
     </div>

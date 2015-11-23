@@ -3,7 +3,7 @@
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Product Name" %>
-        <%= form.text_field :name %>
+        <%= form.text_field :name_item %>
       </div>
     </div>
     <div class="row">
@@ -17,7 +17,7 @@
         <%= form.label "Store" %>
         <% id = @item.store_id %>
         <% s1 = Store.find(id) %>
-        <%= form.select(:store_id, options_from_collection_for_select(@stores, :id , :name, s1.id )) %>
+        <%= form.select(:store_id, options_from_collection_for_select(@stores, :id , :name_store, s1.id )) %>
       </div>
       <div class="large-4 columns">
         <%= form.label "Price" %>
@@ -27,14 +27,14 @@
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Description" %>
-        <%= form.text_field :description %>
+        <%= form.text_field :description_item %>
       </div>
     </div>
     <div class="row">
       <div class="large-12 columns">
         <%= form.label "Current Picture, select a different one if needed" %>
         <%= image_tag @item.image %>
-        <%= form.file_field :image, accept: 'image/png,image/gif,image/jpeg', class: 'button-form' %>
+        <%= form.file_field :image_item, accept: 'image/png,image/gif,image/jpeg', class: 'button-form' %>
       </div>
     </div>
     <div class="row">
