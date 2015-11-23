@@ -17,7 +17,7 @@
             <span><em>Price:</em> <%= item.price %> £</span><br>
             <span><em>User who created this item:</em> Paco</span><br>
             <span><em>Shop where user bought this item:</em>
-            <% @store_id = (item.store_id.to_i) %> <%= @stores[@store_id].name %></span><br>
+            <% @store_id = (item.store_id.to_i) %> <%= @stores[@store_id].name_store %></span><br>
             <br>
             <span><%= link_to 'Show', item %></span><br>
             <div class="linethin"></div>
