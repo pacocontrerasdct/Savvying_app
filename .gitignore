@@ -13,4 +13,5 @@
 /tmp
 .env
 /public/uploads
+/config/secrets.yml
 Gemfile.lock

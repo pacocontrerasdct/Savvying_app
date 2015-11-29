@@ -27,7 +27,6 @@ development:
   <<: *default
   adapter: postgresql
   host: localhost
-  # username: dbcl1re377uqvu
   database: Savvying_app_development
   # username: user
   # database: savvying-dev
@@ -90,10 +89,11 @@ production:
   <<: *default
   # database: Savvying_app_production
   # username: Savvying_app
-  database: dbcl1re377uqvu
-  username: cicqqopjjuhbvb
+  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV['USERNAME'] %>
   url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV['SAVVYING_APP_DATABASE_PASSWORD'] %>
+
 
 
 
