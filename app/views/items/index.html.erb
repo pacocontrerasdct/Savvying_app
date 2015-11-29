@@ -2,31 +2,31 @@
   <div class="row">
     <div class="small-10 large-10 columns">
  
-      <% @num = 1 %>
-      <% @control = 1 %>
-      <% @lenght = @items.length %>
+      <%# @num = 1 %>
+      <%# @control = 1 %>
+      <%# @lenght = @items.length %>
       <% @items.each do |item| %>   
         <div class="row">
           <div class="small-2 large-2 columns">
-            <span><%= image_tag item.image_item %></span>
+            <span><%= image_tag item.image_to_upload.url %></span>
           </div>
           <div class="small-10 large-10 columns">
             <span><em>Product:</em> <%= item.name_item %></span><br>
             <span><em>Description:</em> <%= item.description_item %></span><br>
-            <span><em>Category:</em><% @category_id = (item.category_id.to_i - 1) %> <%= @categories[@category_id].name %></span><br>
+            <span><em>Category:</em>
+            <% @category_id = (item.category_id.to_i - 1) %> <%= @categories[@category_id].name %></span><br>
+
+
             <span><em>Price:</em> <%= item.price %> £</span><br>
             <span><em>User who created this item:</em> Paco</span><br>
             <span><em>Shop where user bought this item:</em>
-            <% @store_id = (item.store_id.to_i) %> <%= @stores[@store_id].name_store %></span><br>
+            <% @store_id = (item.store_id.to_i - 1) %> <%= @stores[@store_id].name_store %></span><br>
             <br>
             <span><%= link_to 'Show', item %></span><br>
             <div class="linethin"></div>
           </div>
         </div>
       <% end %>
-
-
-
 
     </div>
     <div class="small-2 large-2 columns">

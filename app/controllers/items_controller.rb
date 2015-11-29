@@ -60,7 +60,11 @@ class ItemsController < ApplicationController
     end
   end
 
-  def item_params
-    params.require(:item).permit(:name_item, :description_item, :price, :image_item, :store_id, :category_id)
-  end
+
+
+  private
+
+    def item_params
+      params.require(:item).permit(:resize_to_fit, :name_item, :description_item, :price, :image_to_upload, :store_id, :category_id)
+    end
 end

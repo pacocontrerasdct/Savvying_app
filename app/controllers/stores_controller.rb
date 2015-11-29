@@ -1,7 +1,7 @@
 class StoresController < ApplicationController
 
   def index
-    @stores = Store.all.order('name ASC')
+    @stores = Store.all.order('name_store ASC')
   end
 
   def new

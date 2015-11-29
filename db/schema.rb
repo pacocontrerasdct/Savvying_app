@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151123223116) do
+ActiveRecord::Schema.define(version: 20151128184719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(version: 20151123223116) do
     t.string   "name_item"
     t.text     "description_item"
     t.string   "price"
-    t.string   "image_item"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.text     "image_to_upload_filename"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "store_id"
     t.integer  "category_id"
+    t.text     "image_to_upload"
   end
 
   create_table "shop_lists", force: :cascade do |t|
